@@ -27,12 +27,12 @@ bc_correction = 0.64 # for the ABCD
 now_time = dt.datetime.now()
 
 #UCB_ser = serial.Serial('COM7', 9600, timeout = 1, bytesize = serial.SEVENBITS)
-LI7000_ser = serial.Serial('COM3', 9600) #correct COM
-LI820_ser = serial.Serial('COM8', 9600)
-SBA5_ser= serial.Serial('COM6', 19200)
-MA300_ser= serial.Serial('COM13', 1000000)
-ABCD_ser = serial.Serial('COM12', 57600)
-AE33_ser = serial.Serial('COM4', 9600)
+LI7000_ser = serial.Serial('/dev/ttyUSB2', 9600) #correct COM
+LI820_ser = serial.Serial('/dev/ttyUSB_abcd', 9600)
+SBA5_ser= serial.Serial('/dev/ttyUSB_sba5', 19200)
+MA300_ser= serial.Serial('/dev/ttyUSB_abcd', 1000000)
+ABCD_ser = serial.Serial('/dev/ttyUSB_abcd', 57600)
+AE33_ser = serial.Serial('/dev/ttyUSB_ae33', 9600)
 
 df = {"Time": [],'ABCD_BC_original':[],'ABCD_BC_corrected':[], 'ABCD_att':[], 'ABCD_flow':[],'MA300_BC':[], 'SBA5_CO2':[],'AE33_BC':[], 'LI820_CO2':[],'LI7000_CO2':[]}
 
